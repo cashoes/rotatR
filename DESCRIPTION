@@ -1,0 +1,39 @@
+Package: rotatR
+Title: Spectral and Varimax Co-expression Module Discovery
+Version: 0.2.0
+Authors@R: 
+    person("Casey", "Shannon", , "casey.shannon@hli.ubc.ca", role = c("aut", "cre"))
+Description: Fast, parameter-free co-expression module discovery via truncated
+    singular value decomposition (SVD), Nystrom kernel approximation, and
+    varimax rotation. Provides a drop-in replacement for WGCNA with an
+    automated 4-step pipeline: soft-threshold power selection, cross-validated
+    dimension estimation (eigcv), loading thresholding via analytical false
+    discovery rate (FDR) control or subsampling stability selection, and module
+    resolution (winner-take-all assignment, eigengene merging, and minimum module
+    size pruning), plus a 9-panel diagnostic model card.
+License: MIT + file LICENSE
+URL: https://github.com/cashoes/rotatR
+BugReports: https://github.com/cashoes/rotatR/issues
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    stats,
+    utils,
+    RSpectra,
+    rsvd,
+    vsp,
+    clue,
+    ggplot2,
+    patchwork,
+    cowplot,
+    ggsci,
+    viridisLite,
+    tibble,
+    dplyr,
+    purrr,
+    forcats
+Suggests: 
+    testthat (>= 3.0.0),
+    WGCNA
+Config/testthat/edition: 3
